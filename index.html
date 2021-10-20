@@ -12,12 +12,6 @@
     <main>
       <h1>Shuffle a list of words</h1>
       <form onsubmit="return shuffle()" action="#">
-        <label for="words"
-          >List of Words to Shuffle:
-
-          <input type="text" id="words" name="words" />
-        </label>
-
         <label for="lowercase"
           >Lower Case
 
@@ -30,10 +24,14 @@
           <input type="checkbox" id="uppercase" name="uppercase" />
         </label>
 
+        <label for="words" class="input">
+          <input type="text" id="words" name="words" />
+        </label>
+
         <button>Shuffle!</button>
       </form>
 
-      <p id="answer"></p>
+      <textarea id="answer"></textarea>
 
       <footer>
         <p>

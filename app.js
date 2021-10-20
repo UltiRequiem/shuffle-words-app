@@ -41,6 +41,8 @@ document.getElementsByTagName("footer")[0].innerHTML = document
 function shuffle() {
   let data = document.getElementById("words").value;
 
+  if (data === "") return false;
+
   const toLowerCase = document.getElementById("lowercase").checked;
 
   const toUpperCase = document.getElementById("uppercase").checked;
@@ -54,6 +56,7 @@ function shuffle() {
   const answer = array.join(" ");
 
   document.getElementById("answer").innerHTML = answer;
+  document.getElementById("answer").style = "display: block";
 
   if (!clipboardBTNExists) {
     clipboardBTN = document.createElement("button");

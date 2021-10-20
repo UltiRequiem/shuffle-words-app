@@ -1,35 +1,19 @@
 body {
   margin: 0;
 
+  overflow: hidden;
+
   text-align: center;
-  color: gray;
 }
 
 main {
   height: 100vh;
 
-  background: rgb(2, 0, 36);
-
   display: flex;
   flex-direction: column;
 }
 
-main footer {
-  position: fixed;
-  bottom: 2%;
-  width: 100%;
-}
-
-main label {
-  display: block;
-  margin: 3%;
-}
-
-.sencondary_btn {
-  color: red;
-}
-
-#answer {
+main h1 {
   background-image: linear-gradient(
     to left,
     yellow,
@@ -43,4 +27,28 @@ main label {
 
   -webkit-background-clip: text;
   color: transparent;
+
+  font-size: 850%;
+}
+
+main footer {
+  position: fixed;
+  bottom: 2%;
+  width: 100%;
+}
+
+main textarea {
+  margin: 5%;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.input {
+  display: block;
+}
+
+.sencondary_btn {
+}
+
+#answer {
 }
