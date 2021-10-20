@@ -11,7 +11,7 @@ function copyToClipboard(text) {
   navigator.clipboard.writeText(text);
 }
 
-let clipboardButton = false;
+let clipboardButtonExists = false;
 let btn;
 
 function shuffle() {
@@ -30,11 +30,13 @@ function shuffle() {
 
   document.getElementById("answer").innerHTML = answer;
 
-  if (!clipboardButton) {
+  if (!clipboardButtonExists) {
     btn = document.createElement("button");
     btn.innerHTML = "Copy answer to clipboard.";
-    document.body.appendChild(btn);
-    clipboardButton = true;
+
+    document.getElementsByTagName("main")[0].appendChild(btn);
+
+    clipboardButtonExists = true;
   }
 
   btn.onclick = copyToClipboard(answer);

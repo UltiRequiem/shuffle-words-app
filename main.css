@@ -1,11 +1,17 @@
+body {
+  margin: 0;
+}
+
 main {
+  height: 100vh;
+
+  background: red;
+
   display: flex;
   flex-direction: column;
-
 }
 
 main label {
-    display: block;   
-    margin: 3%;
+  display: block;
+  margin: 3%;
 }
-
