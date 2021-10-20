@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <script defer src="app.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1>Shuffle a list of words</h1>
+      <form onsubmit="return shuffle()" action="#">
+        <label for="words"
+          >List of Words to Shuffle:
+
+          <input type="text" id="words" name="words" />
+        </label>
+
+        <label for="lowercase"
+          >lowercase
+
+          <input type="checkbox" id="lowercase" name="lowercase" checked />
+        </label>
+
+        <label for="uppercase"
+          >uppercase
+
+          <input type="checkbox" id="uppercase" name="uppercase" checked />
+        </label>
+
+        <button>Shuffle!</button>
+      </form>
+
+      <p id="answer"></p>
+    </main>
+  </body>
+</html>
