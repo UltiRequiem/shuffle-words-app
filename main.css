@@ -1,5 +1,7 @@
 body {
   margin: 0;
+
+  text-align: center;
 }
 
 main {
@@ -9,6 +11,12 @@ main {
 
   display: flex;
   flex-direction: column;
+}
+
+main footer {
+  position: fixed;
+  bottom: 2%;
+  width: 100%;
 }
 
 main label {
