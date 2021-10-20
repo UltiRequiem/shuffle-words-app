@@ -2,12 +2,13 @@ body {
   margin: 0;
 
   text-align: center;
+  color: gray;
 }
 
 main {
   height: 100vh;
 
-  background: red;
+  background: rgb(2, 0, 36);
 
   display: flex;
   flex-direction: column;
@@ -22,4 +23,24 @@ main footer {
 main label {
   display: block;
   margin: 3%;
+}
+
+.sencondary_btn {
+  color: red;
+}
+
+#answer {
+  background-image: linear-gradient(
+    to left,
+    yellow,
+    violet,
+    indigo,
+    blue,
+    green,
+    orange,
+    red
+  );
+
+  -webkit-background-clip: text;
+  color: transparent;
 }

@@ -58,6 +58,7 @@ function shuffle() {
   if (!clipboardBTNExists) {
     clipboardBTN = document.createElement("button");
     clipboardBTN.innerHTML = "Copy answer to clipboard.";
+    clipboardBTN.className = "sencondary_btn";
 
     document.getElementsByTagName("main")[0].appendChild(clipboardBTN);
 
@@ -69,6 +70,7 @@ function shuffle() {
   if (!fileBTN) {
     fileBTN = document.createElement("button");
     fileBTN.innerHTML = "Download the text in a txt";
+    fileBTN.className = "sencondary_btn";
 
     document.getElementsByTagName("main")[0].appendChild(fileBTN);
 
