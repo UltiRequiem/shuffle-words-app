@@ -32,11 +32,11 @@ function Main() {
   if (!copyToClipboardBTN) {
     copyToClipboardBTN = createElement(
       "button",
-      "copyToClipboard",
-      "sencondary_btn",
+      "Copy text to clipboard",
+      "secondary_btn",
     );
 
-    document.getElementById("principal_form").appendChild(
+    document.getElementById("extra_buttons").appendChild(
       copyToClipboardBTN,
     );
   }
@@ -47,10 +47,10 @@ function Main() {
     donwloadFileBTN = createElement(
       "button",
       "Download the text in a txt.",
-      "sencondary_btn",
+      "secondary_btn",
     );
 
-    document.getElementById("principal_form").appendChild(donwloadFileBTN);
+    document.getElementById("extra_buttons").appendChild(donwloadFileBTN);
   }
 
   donwloadFileBTN.onclick = () => downloadText("shuffle.txt", answer);
