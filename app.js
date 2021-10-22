@@ -1,10 +1,7 @@
 import { copyToClipboard, downloadText, shuffleArray } from "./utils.js";
 
-let clipboardBTNExists = false;
-let clipboardBTN;
-
-let fileBTNExists = false;
-let fileBTN;
+let copyToClipboardBTN = false;
+let donwloadFileBTN = false;
 
 document.getElementsByTagName("footer")[0].innerHTML = document
   .getElementsByTagName("footer")[0]
@@ -32,29 +29,24 @@ function Main() {
   document.getElementById("answer").innerHTML = answer;
   document.getElementById("answer").style = "display: block";
 
-  if (!clipboardBTNExists) {
-    clipboardBTN = document.createElement("button");
-    clipboardBTN.innerHTML = "Copy answer to clipboard.";
-    clipboardBTN.className = "sencondary_btn";
+  if (!copyToClipboardBTN) {
+    copyToClipboardBTN = document.createElement("button");
+    copyToClipboardBTN.innerHTML = "Copy answer to clipboard.";
+    copyToClipboardBTN.className = "sencondary_btn";
 
-    document.getElementsByTagName("main")[0].appendChild(clipboardBTN);
-
-    clipboardBTNExists = true;
+    document.getElementsByTagName("main")[0].appendChild(copyToClipboardBTN);
   }
 
-  clipboardBTN.onclick = copyToClipboard(answer);
+  copyToClipboardBTN.onclick = copyToClipboard(answer);
 
-  if (!fileBTNExists) {
-    fileBTN = document.createElement("button");
-    fileBTN.innerHTML = "Download the text in a txt";
-    fileBTN.className = "sencondary_btn";
-
-    document.getElementsByTagName("main")[0].appendChild(fileBTN);
-
-    fileBTNExists = true;
+  if (!donwloadFileBTN) {
+    donwloadFileBTN = document.createElement("button");
+    donwloadFileBTN.innerHTML = "Download the text in a txt";
+    donwloadFileBTN.className = "sencondary_btn";
+    document.getElementsByTagName("main")[0].appendChild(donwloadFileBTN);
   }
 
-  fileBTN.onclick = () => downloadText("shuffle.txt", answer);
+  donwloadFileBTN.onclick = () => downloadText("shuffle.txt", answer);
 
   return false;
 }
