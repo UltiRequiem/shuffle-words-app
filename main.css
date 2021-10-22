@@ -1,31 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap");
 
-::-webkit-scrollbar {
-  display: none;
-}
-
 body {
   font-family: Poppins;
-  margin: 0;
   text-align: center;
-
-  font-size: 14pt;
-  background: url("./background.jpg");
+  background: blue;
 }
 
 .container {
-  height: 95vh;
+  height: 91vh;
   display: flex;
   flex-direction: column;
   align-content: space-between;
-  margin: 2%;
+  margin: 1%;
 
   background: #a9a9a9;
 }
 
 .container header {
-  height: 15vh;
+  height: 10vh;
   font-size: 3em;
+  margin-bottom: 4%;
 }
 
 .container header h1 {
@@ -42,20 +36,27 @@ body {
 
   -webkit-background-clip: text;
   color: transparent;
+  margin: 1%;
 }
 
 .container main {
   height: 68vh;
+  margin: 5%;
+}
 
-  margin: 10%;
+.container main textarea {
+  margin-top: 2%;
+  resize: none;
+  height: 40%;
+  width: 100%;
 }
 
 .container main .input {
-  margin: 2%;
+  margin: 3%;
   display: block;
 }
 
 .container footer {
-  height: 8vh;
+  height: 10vh;
   margin-bottom: 4%;
 }
