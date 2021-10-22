@@ -10,7 +10,7 @@ document.getElementsByTagName("footer")[0].innerHTML = document
   .getElementsByTagName("footer")[0]
   .innerHTML.replace("currentYear", new Date().getFullYear());
 
-window.Main = Main;
+document.getElementById("principal_form").onsubmit = () => Main();
 
 function Main() {
   let data = document.getElementById("words").value;
