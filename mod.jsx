@@ -1,5 +1,6 @@
 /** @jsx h */
 import { h, jsx, serve } from "https://deno.land/x/sift@0.4.0/mod.ts";
+import React from "https://esm.sh/react";
 
 import styles from "./styles.ts";
 
@@ -15,6 +16,10 @@ serve({
 });
 
 function homePage(request) {
+  const [input, setInput] = React.useState("");
+  const [lowercase, setLowercase] = React.useState(false);
+  const [uppercase, setUppercase] = React.useState(false);
+
   return jsx(
     <html lang="en">
       <head>
@@ -45,13 +50,19 @@ function homePage(request) {
 
                 <div className="input">
                   <label for="words">Wors To Shuffle:</label>
-                  <input type="text" id="words" name="words" />
+                  <input
+                    type="text"
+                    id="words"
+                    name="words"
+                    value={input}
+                    onInput={(e) => setInput(e.target.value)}
+                  />
                 </div>
                 <button id="principal_btn">Shuffle!</button>
               </form>
             </div>
 
-            <textarea id="answer"></textarea>
+            <textarea id="answer">{shuffleArray(input.split(" "))}</textarea>
 
             <div id="extra_buttons"></div>
           </main>
