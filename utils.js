@@ -7,16 +7,16 @@ export function shuffleArray(array) {
   return array;
 }
 
-export function copyToClipboard(text) {
-  navigator.clipboard.writeText(text);
+export async function copyToClipboard(text) {
+  await navigator.clipboard.writeText(text);
 }
 
-export function download(filename, text) {
+export function downloadText(filename, text) {
   const element = document.createElement("a");
 
   element.setAttribute(
     "href",
-    "data:text/plain;charset=utf-8," + encodeURIComponent(text)
+    "data:text/plain;charset=utf-8," + encodeURIComponent(text),
   );
 
   element.setAttribute("download", filename);

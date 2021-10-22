@@ -1,4 +1,4 @@
-import { shuffleArray, copyToClipboard, download } from "./utils.js";
+import { copyToClipboard, downloadText, shuffleArray } from "./utils.js";
 
 let clipboardBTNExists = false;
 let clipboardBTN;
@@ -10,9 +10,9 @@ document.getElementsByTagName("footer")[0].innerHTML = document
   .getElementsByTagName("footer")[0]
   .innerHTML.replace("currentYear", new Date().getFullYear());
 
-window.shuffle = shuffle;
+window.Main = Main;
 
-function shuffle() {
+function Main() {
   let data = document.getElementById("words").value;
 
   if (data === "") return false;
@@ -54,7 +54,7 @@ function shuffle() {
     fileBTNExists = true;
   }
 
-  fileBTN.onclick = () => download("shuffle.txt", answer);
+  fileBTN.onclick = () => downloadText("shuffle.txt", answer);
 
   return false;
 }
