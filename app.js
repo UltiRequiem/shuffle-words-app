@@ -1,32 +1,4 @@
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-
-  return array;
-}
-
-function download(filename, text) {
-  const element = document.createElement("a");
-
-  element.setAttribute(
-    "href",
-    "data:text/plain;charset=utf-8," + encodeURIComponent(text)
-  );
-  element.setAttribute("download", filename);
-
-  element.style.display = "none";
-  document.body.appendChild(element);
-
-  element.click();
-
-  document.body.removeChild(element);
-}
-
-function copyToClipboard(text) {
-  navigator.clipboard.writeText(text);
-}
+import { shuffleArray, copyToClipboard, download } from "./utils.js";
 
 let clipboardBTNExists = false;
 let clipboardBTN;
@@ -37,6 +9,8 @@ let fileBTN;
 document.getElementsByTagName("footer")[0].innerHTML = document
   .getElementsByTagName("footer")[0]
   .innerHTML.replace("currentYear", new Date().getFullYear());
+
+window.shuffle = shuffle;
 
 function shuffle() {
   let data = document.getElementById("words").value;
@@ -70,7 +44,7 @@ function shuffle() {
 
   clipboardBTN.onclick = copyToClipboard(answer);
 
-  if (!fileBTN) {
+  if (!fileBTNExists) {
     fileBTN = document.createElement("button");
     fileBTN.innerHTML = "Download the text in a txt";
     fileBTN.className = "sencondary_btn";
