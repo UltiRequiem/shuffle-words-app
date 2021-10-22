@@ -36,12 +36,17 @@ main footer {
 }
 
 main textarea {
-  margin: 5%;
   width: 80%;
   margin-left: 10%;
 }
 
+main form button {
+  margin: 3%;
+  color: red;
+}
+
 .input {
+  margin: 2%;
   display: block;
 }
 
