@@ -1,4 +1,4 @@
-export function shuffleArray(array) {
+export function shuffleArray<T>(array: T[]): T[] {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -7,11 +7,15 @@ export function shuffleArray(array) {
   return array;
 }
 
-export async function copyToClipboard(text) {
+export async function copyToClipboard(text: string) {
   await navigator.clipboard.writeText(text);
 }
 
-export function createElement(elementTag, innerHTML, className) {
+export function createElement(
+  elementTag: string,
+  innerHTML: string,
+  className: string,
+) {
   const element = document.createElement(elementTag);
 
   element.innerHTML = innerHTML;
@@ -20,7 +24,7 @@ export function createElement(elementTag, innerHTML, className) {
   return element;
 }
 
-export function downloadText(filename, text) {
+export function downloadText(filename: string, text: string) {
   const element = document.createElement("a");
 
   element.setAttribute(
