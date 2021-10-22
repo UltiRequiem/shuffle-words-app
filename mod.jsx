@@ -109,7 +109,7 @@ function homePage(request) {
           </header>
           <main>
             <div className="form_container">
-              <form action="#" id="principal_form" onSubmit={}>
+              <form action="#" id="principal_form">
                 <label for="lowercase">
                   Lower Case
                   <input type="checkbox" id="lowercase" name="lowercase" />
