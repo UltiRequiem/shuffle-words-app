@@ -91,7 +91,7 @@ const style = css`
   }
 `;
 
-function homePage(request: Request) {
+function homePage(request) {
   return jsx(
     <html lang="en">
       <head>
@@ -155,6 +155,6 @@ function homePage(request: Request) {
 }
 
 /** Wrapper function to get syntax highlight for CSS in editors. */
-function css(style: TemplateStringsArray) {
+function css(style ) {
   return style.join("");
 }
