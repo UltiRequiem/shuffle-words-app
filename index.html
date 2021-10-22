@@ -9,30 +9,35 @@
     <title>Shuffle Words</title>
   </head>
   <body>
-    <main>
-      <h1>Shuffle a list of words</h1>
-      <form action="#" id="principal_form">
-        <label for="lowercase"
-          >Lower Case
+    <div class="container">
+      <header>
+        <h1>Shuffle a list of words</h1>
+      </header>
+      <main>
+        <div class="form_container">
+          <form action="#" id="principal_form">
+            <label for="lowercase"
+              >Lower Case
 
-          <input type="checkbox" id="lowercase" name="lowercase" />
-        </label>
+              <input type="checkbox" id="lowercase" name="lowercase" />
+            </label>
 
-        <label for="uppercase"
-          >Upper Case
+            <label for="uppercase"
+              >Upper Case
 
-          <input type="checkbox" id="uppercase" name="uppercase" />
-        </label>
+              <input type="checkbox" id="uppercase" name="uppercase" />
+            </label>
 
-        <label for="words" class="input">
-          <input type="text" id="words" name="words" />
-        </label>
+            <label for="words" class="input" class="input">
+              <input type="text" id="words" name="words" />
+            </label>
 
-        <button>Shuffle!</button>
-      </form>
+            <button>Shuffle!</button>
+          </form>
+        </div>
 
-      <textarea id="answer"></textarea>
-
+        <textarea id="answer"></textarea>
+      </main>
       <footer>
         <p>
           <a href="https://github.com/UltiRequiem">
@@ -40,10 +45,12 @@
           >
         </p>
 
-        This Page is <a href="https://opensource.org">Open Source</a>, you can
-        contribute
-        <a href="https://github.com/UltiRequiem/shuffle-words-app">here</a>.
+        <p>
+          This Page is <a href="https://opensource.org">Open Source</a>, you can
+          contribute
+          <a href="https://github.com/UltiRequiem/shuffle-words-app">here</a>.
+        </p>
       </footer>
-    </main>
+    </div>
   </body>
 </html>

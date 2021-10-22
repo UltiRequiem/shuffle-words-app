@@ -1,9 +1,13 @@
-import { copyToClipboard, downloadText, shuffleArray } from "./utils.js";
+import {
+  copyToClipboard,
+  createElement,
+  downloadText,
+  shuffleArray,
+} from "./utils.js";
 
 let copyToClipboardBTN = false;
 let donwloadFileBTN = false;
 
-// Shuffle Button, starts all.
 document.getElementById("principal_form").onsubmit = () => Main();
 
 function Main() {
@@ -24,23 +28,29 @@ function Main() {
   const answer = array.join(" ");
 
   document.getElementById("answer").innerHTML = answer;
-  document.getElementById("answer").style = "display: block";
 
   if (!copyToClipboardBTN) {
-    copyToClipboardBTN = document.createElement("button");
-    copyToClipboardBTN.innerHTML = "Copy answer to clipboard.";
-    copyToClipboardBTN.className = "sencondary_btn";
+    copyToClipboardBTN = createElement(
+      "button",
+      "copyToClipboard",
+      "sencondary_btn",
+    );
 
-    document.getElementsByTagName("main")[0].appendChild(copyToClipboardBTN);
+    document.getElementById("principal_form").appendChild(
+      copyToClipboardBTN,
+    );
   }
 
   copyToClipboardBTN.onclick = copyToClipboard(answer);
 
   if (!donwloadFileBTN) {
-    donwloadFileBTN = document.createElement("button");
-    donwloadFileBTN.innerHTML = "Download the text in a txt";
-    donwloadFileBTN.className = "sencondary_btn";
-    document.getElementsByTagName("main")[0].appendChild(donwloadFileBTN);
+    donwloadFileBTN = createElement(
+      "button",
+      "Download the text in a txt.",
+      "sencondary_btn",
+    );
+
+    document.getElementById("principal_form").appendChild(donwloadFileBTN);
   }
 
   donwloadFileBTN.onclick = () => downloadText("shuffle.txt", answer);

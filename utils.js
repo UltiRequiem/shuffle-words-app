@@ -11,6 +11,15 @@ export async function copyToClipboard(text) {
   await navigator.clipboard.writeText(text);
 }
 
+export function createElement(elementTag, innerHTML, className) {
+  const element = document.createElement(elementTag);
+
+  element.innerHTML = innerHTML;
+  element.className = className;
+
+  return element;
+}
+
 export function downloadText(filename, text) {
   const element = document.createElement("a");
 

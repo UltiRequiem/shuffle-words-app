@@ -1,17 +1,34 @@
-body {
-  margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap");
 
-  text-align: center;
+::-webkit-scrollbar {
+  display: none;
 }
 
-main {
-  height: 100vh;
+body {
+  font-family: Poppins;
+  margin: 0;
+  text-align: center;
 
+  font-size: 14pt;
+  background: url("./background.jpg");
+}
+
+.container {
+  height: 95vh;
   display: flex;
   flex-direction: column;
+  align-content: space-between;
+  margin: 2%;
+
+  background: #a9a9a9;
 }
 
-main h1 {
+.container header {
+  height: 15vh;
+  font-size: 3em;
+}
+
+.container header h1 {
   background-image: linear-gradient(
     to left,
     yellow,
@@ -25,33 +42,20 @@ main h1 {
 
   -webkit-background-clip: text;
   color: transparent;
-
-  font-size: 850%;
 }
 
-main footer {
-  position: fixed;
-  bottom: 2%;
-  width: 100%;
+.container main {
+  height: 68vh;
+
+  margin: 10%;
 }
 
-main textarea {
-  width: 80%;
-  margin-left: 10%;
-}
-
-main form button {
-  margin: 3%;
-  color: red;
-}
-
-.input {
+.container main .input {
   margin: 2%;
   display: block;
 }
 
-.sencondary_btn {
-}
-
-#answer {
+.container footer {
+  height: 8vh;
+  margin-bottom: 4%;
 }
