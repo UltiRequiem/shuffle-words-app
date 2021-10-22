@@ -3,10 +3,7 @@ import { copyToClipboard, downloadText, shuffleArray } from "./utils.js";
 let copyToClipboardBTN = false;
 let donwloadFileBTN = false;
 
-document.getElementsByTagName("footer")[0].innerHTML = document
-  .getElementsByTagName("footer")[0]
-  .innerHTML.replace("currentYear", new Date().getFullYear());
-
+// Shuffle Button, starts all.
 document.getElementById("principal_form").onsubmit = () => Main();
 
 function Main() {
